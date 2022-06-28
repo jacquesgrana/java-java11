@@ -21,7 +21,8 @@ public class Method_02_Test {
         // TODO exemple de résultat : "[14 persons]", "[30 persons]"
         
         default String format() {
-        	return "[" + findAll().size() + " persons]";
+        	StringBuilder builder = new StringBuilder();
+        	return builder.append("[").append(findAll().size()).append( " persons]").toString();
         }
     }
     // end::IDao[]
@@ -38,7 +39,8 @@ public class Method_02_Test {
         
         @Override
 		public String format() {
-        	return "DaoA[" + findAll().size() + " persons]";
+        	StringBuilder builder = new StringBuilder();
+        	return builder.append("DaoA[").append(findAll().size()).append( " persons]").toString();
         }
 
         // TODO redéfinir la méthode String format()
