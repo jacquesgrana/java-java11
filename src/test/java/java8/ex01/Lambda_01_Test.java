@@ -38,7 +38,7 @@ public class Lambda_01_Test {
 
 		List<Person> personList = Data.buildPersonList(100);
 
-		// Predicate
+		/*
 		PersonPredicate predicate = new PersonPredicate() {
 
 			@Override
@@ -46,7 +46,9 @@ public class Lambda_01_Test {
 
 				return p.getAge() >= 18;
 			}
-		};
+		};*/
+		
+		PersonPredicate predicate = p -> p.getAge() >= 18;
 		// TODO result ne doit contenir que des personnes adultes (age >= 18)
 		List<Person> result = filter(personList, predicate);
 
