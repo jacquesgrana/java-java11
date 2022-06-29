@@ -42,7 +42,8 @@ public class Method_02_Test {
         	StringBuilder builder = new StringBuilder();
         	//return builder.append("DaoA[").append(findAll().size()).append( " persons]").toString();
         	//<return "DaoA" + IDao.super.format();
-        	return getClass().getSimpleName() + IDao.super.format();
+        	//return getClass().getSimpleName() + IDao.super.format();
+        	return builder.append(getClass().getSimpleName()).append(IDao.super.format()).toString();
         }
 
         // TODO redéfinir la méthode String format()
