@@ -17,6 +17,10 @@ public class Order {
 		this.customer = customer;
 		this.pizzas = pizzas;
 	}
+	
+	public int compare(Order o1, Order o2) {
+		return (int) (o1.getPrice() - o2.getPrice());
+	}
 
 	public double getPrice() {
 		return pizzas.stream().mapToDouble(p -> p.getPrice()).sum();
