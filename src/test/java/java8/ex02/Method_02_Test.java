@@ -40,7 +40,9 @@ public class Method_02_Test {
         @Override
 		public String format() {
         	StringBuilder builder = new StringBuilder();
-        	return builder.append("DaoA[").append(findAll().size()).append( " persons]").toString();
+        	//return builder.append("DaoA[").append(findAll().size()).append( " persons]").toString();
+        	//<return "DaoA" + IDao.super.format();
+        	return getClass().getSimpleName() + IDao.super.format();
         }
 
         // TODO redéfinir la méthode String format()

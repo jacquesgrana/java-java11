@@ -21,11 +21,9 @@ public class Method_01_Test {
         
         public default int sumAge() {
         	int sum = 0;
-        	
         	for(Person element : findAll()) {
         		sum += element.getAge();
         	}
-        	
         	return sum;
         }
         // TODO Cette méthode retourne le résultat de l'addition des ages des personnes
