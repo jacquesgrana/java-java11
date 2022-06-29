@@ -35,13 +35,16 @@ public class Lambda_02_Test {
 
         List<Person> personList = Data.buildPersonList(100);
         
+        /*
         PersonToAccountMapper mapper = new PersonToAccountMapper() {
 			
 			@Override
 			public Account map(Person p) {
 				return new Account(p, 100);
 			}
-		};
+		};*/
+		
+		PersonToAccountMapper mapper = p ->  new Account(p, 100);
         
         // TODO transformer la liste de personnes en liste de comptes
         // TODO tous les objets comptes ont un solde à 100 par défaut
