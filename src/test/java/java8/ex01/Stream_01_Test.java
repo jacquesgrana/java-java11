@@ -104,7 +104,7 @@ public class Stream_01_Test {
 		// pizza Pépéroni
 		//List<Order> result = orders.stream().filter(o -> o.getPizzas().contains(new Pizza(1, "Pépéroni", 1250))).toList();
 		
-		List<Order> result = orders.stream().filter(o -> o.getPizzas().stream().anyMatch( p -> p.getName().equals("Pépéroni")) ).toList();
+		List<Order> result = orders.stream().filter( o -> o.getPizzas().stream().anyMatch( p -> p.getName().equals("Pépéroni") ) ).toList();
 
 		assertThat(result, hasSize(3));
 	}

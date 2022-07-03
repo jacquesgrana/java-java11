@@ -18,15 +18,8 @@ public class Stream_04_Test {
     @Test
     public void test_of() throws Exception {
         // Construire un stream permettant de rendre le test passant
-    	List<String> list = new ArrayList<>();
-    	list.add("Alexandra");
-    	list.add("Cyril");
-    	list.add("Johnny");
-    	list.add("Marion");
-    	list.add("Sophie");
     	
-        Stream<String> result = list.stream();
-        //result.
+    	Stream<String> result = Stream.of("Alexandra", "Cyril", "Johnny", "Marion", "Sophie");
 
         assertThat(result.toArray(), arrayContaining("Alexandra", "Cyril", "Johnny", "Marion", "Sophie"));
     }
